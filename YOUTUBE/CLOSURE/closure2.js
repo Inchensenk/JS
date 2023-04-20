@@ -20,3 +20,5 @@ increment(); //1
 increment(); //2
 increment(); //3
 log(); //Count is 0
+
+//https://www.youtube.com/watch?v=mI6Jcfsgma4
