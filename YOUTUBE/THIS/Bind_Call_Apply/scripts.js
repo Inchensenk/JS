@@ -55,3 +55,5 @@ console.log(pay);//Ваш обед (pizza, salad стоит 1100р)
 console.log(payCount);//Ваш обед (pizza, salad стоит 1100р)
 console.log(payCount01);//Ваш обед (pizza, salad стоит 1100р)
 console.log(payCount2);//Ваш обед (pizza, salad стоит 1100р)
+
+//https://www.youtube.com/watch?v=wU5GJv9lq-I&t=393s
