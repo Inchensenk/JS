@@ -8,19 +8,19 @@ const people = [
 ];
 
 /*
-//привычный способ 1 ES5
+        //привычный способ 1 ES5
 for(let i = 0; i<people.length; i++)
 {
     console.log(people[i])
 }
-//привычный способ 2 ES6
+            //привычный способ 2 ES6
 for (let person of people)
 {
     console.log(person);
 }
 */
 
-//ForEach
+                //ForEach
 /*
 people.forEach(function(person, index, peopleArr)
 {
@@ -32,10 +32,58 @@ people.forEach(function(person, index, peopleArr)
 //ES6
 //people.forEach(person =>  console.log(person));
 
-//Map возвращает новый массив
+                    //Map возвращает новый массив
 
 //итерируем по всему массиву и итерируем сам объект
+/*
 const newPeaple = people.map(person => {
     return person;
 });
-console.log(newPeaple);
+console.log(newPeaple);*/
+
+/*
+const newPeaple = people.map(person => {
+    return 'Hello';
+});
+console.log(newPeaple);//[ 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello' ]*/
+/*
+const newPeaple = people.map(person => {
+    return person.name;
+});
+console.log(newPeaple);//[ 'Владимир', 'Елена', 'Игорь', 'Михаил', 'Василиса', 'Виктория' ]*/
+/*
+const newPeaple = people.map(person => {
+    return `${person.name} (${person.age})`;
+});
+console.log(newPeaple);//[    'Владимир (25)',    'Елена (17)',    'Игорь (49)',    'Михаил (15)',    'Василиса (24)',    'Виктория (38)'  ]*/
+
+/*
+const newPeaple = people.map(person =>  `${person.name} (${person.age})`);
+console.log(newPeaple);//[    'Владимир (25)',    'Елена (17)',    'Игорь (49)',    'Михаил (15)',    'Василиса (24)',    'Виктория (38)'  ]*/
+
+const newPeaple = people.map(person =>  person.age*3);
+console.log(newPeaple);//[75, 51, 147, 45, 72, 114]
+
+            //Filter фильтрует массив по условию
+
+//
+/*
+const adults = people.filter( person => {
+    if(person.age >= 18) {  return true; }
+});
+console.log(adults);*/
+
+//тоже самое что выше
+const adults = people.filter( person => person.age >= 18);
+console.log(adults);//вернет людей старше 18
+
+
+
+            //Reduce возвращает финалное значение совершив итерацию по массиву
+
+
+
+            //Find
+
+            //FindIndex
+
