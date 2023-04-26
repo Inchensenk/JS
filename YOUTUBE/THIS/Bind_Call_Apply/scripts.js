@@ -14,10 +14,9 @@ const motorBike = {
 
 
 const autoDrive = auto.drive.bind(auto);
-
-autoDrive();//{ brand: 'BMW', drive: [Function: drive] }// в хроме {brand: 'BMW', drive: ƒ}brand: "BMW"drive: ƒ drive()[[Prototype]]: Object
-'Заведем наш BMW'
-
+autoDrive();//{ brand: 'BMW', drive: [Function: drive] }// в хроме 'Заведем наш BMW'
 
 const motorDrive = auto.drive.bind(motorBike);
-motorDrive();//{ brand: 'Suzuki' }// в хроме {brand: 'Suzuki'}brand: "Suzuki"[[Prototype]]: Object 'Заведем наш Suzuki'
+motorDrive();//{ brand: 'Suzuki' }// в хроме 'Заведем наш Suzuki'
+
+const motorDrive1 = auto.drive.bind({brand: 'Корабл'});// в хроме 'Заведем наш Корабл'
