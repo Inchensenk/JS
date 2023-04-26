@@ -23,3 +23,5 @@ bmw.drive();//40
 bmw.drive();//20
 bmw.drive();//0
 bmw.drive();//бензин закончился
+
+//https://www.youtube.com/watch?v=o_HntOTCqks
