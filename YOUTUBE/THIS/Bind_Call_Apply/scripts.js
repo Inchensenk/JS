@@ -10,6 +10,10 @@ const bill =
         return total + total*this.tip
     }
 }
-
+/*
 const pay = bill.calculate(1000);
-console.log(pay) 
+console.log(pay) */
+
+//привязываем функцию к объекту bill
+const payCount = bill.calculate.bind(bill);
+console.log(payCount(1000));
