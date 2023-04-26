@@ -45,4 +45,9 @@ console.log(payCount);//1100
 console.log(payCount2);//1100*/
 
 const pay = bill.detail('pizza', 'salad', 1000);
-console.log(pay);
+const payCount = bill.detail.call(bill, 'pizza', 'salad', 1000);
+const payCount2 = bill.detail.apply(bill, ['pizza', 'salad', 1000]);
+
+console.log(pay);//Ваш обед (pizza, salad стоит 1100р)
+console.log(payCount);//Ваш обед (pizza, salad стоит 1100р)
+console.log(payCount2);//Ваш обед (pizza, salad стоит 1100р)
