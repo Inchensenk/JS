@@ -1,28 +1,15 @@
-const auto = {
-    brand: "BMW",
-    drive(){
-        console.log(this)
-        return `Заведем наш ${this.brand}`;
+
+
+/*Счет */
+const bill =
+{
+    tip: 0.1,//чаявые
+    calculate(total)//общий счет с чаявыми
+    {
+        console.log(this);
+        return total + total*this.tip
     }
 }
 
-const motorBike = {
-    brand: "Suzuki"
-}
-
-
-
-/*
-const autoDrive = auto.drive.bind(auto);
-autoDrive();//{ brand: 'BMW', drive: [Function: drive] }// в хроме 'Заведем наш BMW'
-
-const motorDrive = auto.drive.bind(motorBike);
-motorDrive();//{ brand: 'Suzuki' }// в хроме 'Заведем наш Suzuki'
-
-const motorDrive1 = auto.drive.bind({brand: 'Корабл'});// в хроме 'Заведем наш Корабл'*/
-
-const $ = document.querySelector.bind(document); 
-const header = $('h2');
-console.log(header);
-
-
+const pay = bill.calculate(1000);
+console.log(pay) 
