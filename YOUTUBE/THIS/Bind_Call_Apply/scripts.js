@@ -1,3 +1,9 @@
-'use strict';
+const auto = {
+    brand: "Tesla",
+    drive(){
+        console.log(this)
+        return `Заведем нашу ${this.brand}`;
+    }
+}
 
-111
+const autoDrive =auto.drive.bind(auto);
