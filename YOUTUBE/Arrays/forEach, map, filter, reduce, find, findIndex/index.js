@@ -90,7 +90,10 @@ console.log(amount);//143200
 const amount = people.reduce((total, person) => total+person.budget, 0);
 console.log(amount);//143200
 
-            //Find
+            //Find находит нужный элемент по условию
+const igor = people.find(person => person.name === 'Игорь')
+console.log(igor);//{name: 'Игорь', age: 49, budget: 50000}
 
-            //FindIndex
-
+            //FindIndex тоже самое что и файнд но возвращает индекс 'ktvtynf
+const igorIndex = people.findIndex(person => person.name === 'Игорь')
+console.log(igorIndex);//2
