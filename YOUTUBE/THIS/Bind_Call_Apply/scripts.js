@@ -8,6 +8,10 @@ const bill =
     {
         console.log(this);
         return total + total*this.tip
+    },
+    detail(dish1, dish2, sum)
+    {
+        return `Ваш обед (${dish1}, ${dish2} стоит${this.calculate(sum)})`;
     }
 }
 /*
@@ -31,11 +35,11 @@ console.log(payCount());*/
 const payCount = bill.calculate.bind(bill).bind({tip: 0.2}).bind({tip: 0.5});
 console.log(payCount(1000));
 */
-
+/*
 const pay = bill.calculate.bind(bill);
 const payCount = bill.calculate.call(bill, 1000);
 const payCount2 = bill.calculate.apply(bill, [1000]);
 
 console.log(pay(1000));//1100
 console.log(payCount);//1100
-console.log(payCount2);//1100
+console.log(payCount2);//1100*/
