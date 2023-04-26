@@ -21,5 +21,8 @@ motorDrive();//{ brand: 'Suzuki' }// в хроме 'Заведем наш Suzuki
 
 const motorDrive1 = auto.drive.bind({brand: 'Корабл'});// в хроме 'Заведем наш Корабл'*/
 
-const header = document.querySelector('h2'); 
+const $ = document.querySelector.bind(document); 
+const header = $('h2');
 console.log(header);
+
+
