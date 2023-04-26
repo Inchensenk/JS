@@ -80,8 +80,15 @@ console.log(adults);//вернет людей старше 18
 
 
             //Reduce возвращает финалное значение совершив итерацию по массиву
-
-
+ /*
+//оющий бюджет
+const amount = people.reduce((total, person) => {
+    return total+person.budget;
+}, 0);
+console.log(amount);//143200
+*/
+const amount = people.reduce((total, person) => total+person.budget, 0);
+console.log(amount);//143200
 
             //Find
 
