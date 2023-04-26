@@ -11,7 +11,7 @@ const bill =
     },
     detail(dish1, dish2, sum)
     {
-        return `Ваш обед (${dish1}, ${dish2} стоит${this.calculate(sum)})`;
+        return `Ваш обед (${dish1}, ${dish2} стоит ${this.calculate(sum)}р)`;
     }
 }
 /*
@@ -43,3 +43,6 @@ const payCount2 = bill.calculate.apply(bill, [1000]);
 console.log(pay(1000));//1100
 console.log(payCount);//1100
 console.log(payCount2);//1100*/
+
+const pay = bill.detail('pizza', 'salad', 1000);
+console.log(pay);
