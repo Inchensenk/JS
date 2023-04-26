@@ -21,4 +21,21 @@ for (let person of people)
 */
 
 //ForEach
-people.forEach
+/*
+people.forEach(function(person, index, peopleArr)
+{
+    console.log(person);
+    console.log(index);
+    console.log(peopleArr);
+});*/
+
+//ES6
+//people.forEach(person =>  console.log(person));
+
+//Map возвращает новый массив
+
+//итерируем по всему массиву и итерируем сам объект
+const newPeaple = people.map(person => {
+    return person;
+});
+console.log(newPeaple);
