@@ -14,6 +14,15 @@ const bill =
 const pay = bill.calculate(1000);
 console.log(pay) */
 
+/*
 //привязываем функцию к объекту bill
 const payCount = bill.calculate.bind(bill);
-console.log(payCount(1000));
+console.log(payCount(1000));*/
+
+/*//меняем процент чаевых на 20%
+const payCount = bill.calculate.bind({tip: 0.2});
+console.log(payCount(1000));*/
+
+//тоже самое что и выше
+const payCount = bill.calculate.bind({tip: 0.2}, 1000);
+console.log(payCount());
