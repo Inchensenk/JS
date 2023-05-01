@@ -21,9 +21,13 @@
         {
             //event.target- целевой элемент - элемент на котором произошло событие - элемент на который кликнули
             console.log(event.target);//отоброжаем кнопку на которую кликнули в виде DOM элемента// <button data-number="2" class="btn">Click-2</button>
+
             console.log(event.target.dataset);//отоброжаем атрибут с номером кнопки// DOMStringMap {number: '2'}
             console.log(event.target.dataset.number);//отоброжаем содержимое тега data-number// к примеру 3
             console.log(parseInt(event.target.dataset.number));//преобразуем результат в число
+
+            console.log(event.target.textContent);// текстовое содержимое кнопки // кпримеру: Click-1
+
         }
 
         buttons.forEach( button => 
