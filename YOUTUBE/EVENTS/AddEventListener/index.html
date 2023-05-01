@@ -10,11 +10,13 @@
 <body>
     <div class="wrapper">
         <button class="btn">Click</button>
+        <button class="btn-2">Click</button>
     </div>
 
     <script>
         //Выделяем элемент с классом btn
         const button = document.querySelector('.btn');
+        const button2 = document.querySelector('.btn-2');
 
         function handleClick() 
         {
@@ -23,9 +25,13 @@
 
         /*Вешаем обработчик события на кнопку: 
         первый параметр ('click') - название события которое собираемся слушать
-        Второй параметр - callback-функция
+        Второй параметр (handleClick) - callback-функция
         */
         button.addEventListener('click', handleClick);
+        button2.addEventListener('click', handleClick);
+
+        //снимаем обработчик события с элемента
+        button2.removeEventListener('click', handleClick);
     </script>
 </body>
 </html>
