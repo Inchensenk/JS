@@ -110,7 +110,7 @@ const buttons = document.querySelectorAll('.btn');
 function handleClick(event)
 {
     const currentButton = event.currentTarget;
-    currentButton.parentElement.remove();
+    currentButton.closest('.autoCard').remove();
     console.log(currentButton.parentElement);
 }
 
