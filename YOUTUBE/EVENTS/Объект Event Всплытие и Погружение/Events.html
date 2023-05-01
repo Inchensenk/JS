@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <h2>Event</h2>
         <button data-number="1" class="btn">Click <strong>1</strong></button>
         <button data-number="2" class="btn">Click <strong>2</strong></button>
         <button data-number="3" class="btn">Click <strong>3</strong></button>
@@ -32,7 +33,14 @@
             //event.currentTarget - элемент на котрый мы повесили обработчик события - Элемент который находится слева от addEventListener
             console.log(event.target === event.currentTarget);
 
+            //event.stopPropagation();//Запрет всплытия - Мы говорим всем внешним элементам включая объекта Window не реагировать на событие - событие только для кнопки
+
         }
+        
+        window.addEventListener('click', function(event)
+        {
+            console.log('Window Click', event.target)
+        });
 
         buttons.forEach( button => 
         {
