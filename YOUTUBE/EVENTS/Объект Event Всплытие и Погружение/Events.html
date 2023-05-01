@@ -7,10 +7,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <button data-number="1" class="btn">Click-1</button>
-        <button data-number="2" class="btn">Click-2</button>
-        <button data-number="3" class="btn">Click-3</button>
-        <button data-number="4" class="btn">Click-4</button>
+        <button data-number="1" class="btn">Click <strong>1</strong></button>
+        <button data-number="2" class="btn">Click <strong>2</strong></button>
+        <button data-number="3" class="btn">Click <strong>3</strong></button>
+        <button data-number="4" class="btn">Click <strong>4</strong></button>
     </div>
 
     <script>
@@ -20,13 +20,17 @@
         const handleClick = (event) =>
         {
             //event.target- целевой элемент - элемент на котором произошло событие - элемент на который кликнули
-            console.log(event.target);//отоброжаем кнопку на которую кликнули в виде DOM элемента// <button data-number="2" class="btn">Click-2</button>
+            console.log("target >", event.target);//отоброжаем кнопку на которую кликнули в виде DOM элемента// <button data-number="2" class="btn">Click-2</button>
+            //console.log("target >", event.target.dataset);//отоброжаем атрибут с номером кнопки// DOMStringMap {number: '2'}
+            //console.log("target >", event.target.dataset.number);//отоброжаем содержимое тега data-number// к примеру 3
+            //console.log("target >", parseInt(event.target.dataset.number));//преобразуем результат в число
+            //console.log("target >", event.target.textContent);// текстовое содержимое кнопки // кпримеру: Click-1
 
-            console.log(event.target.dataset);//отоброжаем атрибут с номером кнопки// DOMStringMap {number: '2'}
-            console.log(event.target.dataset.number);//отоброжаем содержимое тега data-number// к примеру 3
-            console.log(parseInt(event.target.dataset.number));//преобразуем результат в число
+            console.log("currentTarget >", event.currentTarget);
 
-            console.log(event.target.textContent);// текстовое содержимое кнопки // кпримеру: Click-1
+            //event.target - целевой элемент на который мы изначально кликнули
+            //event.currentTarget - элемент на котрый мы повесили обработчик события - Элемент который находится слева от addEventListener
+            console.log(event.target === event.currentTarget);
 
         }
 
