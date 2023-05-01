@@ -82,9 +82,9 @@ carsDiv.classList.add('autos');//добавляем класс autos
 
 //Создать 3 карточки авто, используя функцию generateAutoCard
 const carsList = [
-    {brand: 'Tesla', color: 'red', year: 2015 },
-    {brand: 'Lexus', color: 'silver', year: 2016 },
-    {brand: 'Nissan', color: 'black', year: 2012 },
+    {brand: 'Tesla', color: 'Красный', year: 2015 },
+    {brand: 'Lexus', color: 'Серебристый', year: 2016 },
+    {brand: 'Nissan', color: 'Черный', year: 2012 },
 ];
 
 const carsHTML = carsList.map(car => {
@@ -98,6 +98,7 @@ carsDiv.innerHTML = carsHTML;
 //Поместить div с классом autos на страницу DOM - до DIV с классом wrapper
 div.insertAdjacentElement('beforebegin', carsDiv);
 
+//Добавить кнопку удалить на каждую кнопку авто
 
 
 console.log(carsDiv);
