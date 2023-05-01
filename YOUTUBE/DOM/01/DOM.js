@@ -99,7 +99,24 @@ carsDiv.innerHTML = carsHTML;
 //Поместить div с классом autos на страницу DOM - до DIV с классом wrapper
 div.insertAdjacentElement('beforebegin', carsDiv);
 
-//Добавить кнопку удалить на каждую кнопку авто
+/*Добавить кнопку удалить на каждую кнопку авто 
+(добавлено в строке return в generateAutoCard)*/
 
 
-console.log(carsDiv);
+//При клике на кнопку - удалять карточку из структуры DOM
+//1. Выбрать все кнопки
+const buttons = document.querySelectorAll('.btn');
+//2. Создать функцию удаления 
+function handleClick(event)
+{
+    const currentButton = event.currentTarget;
+    currentButton.parentElement.remove();
+    console.log(currentButton.parentElement);
+}
+
+console.log(buttons);
+//3. Использовать цикл - чтобы повесить обработчик события на каждую кнопку
+buttons.forEach(button => 
+{
+    button.addEventListener('click', handleClick);//слушаем событие нажатия на кнопку мышью 'click' и при срабатывании события вызываем метод handleClick
+});
