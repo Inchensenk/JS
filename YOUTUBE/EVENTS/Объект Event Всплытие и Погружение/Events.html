@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <img src="https://picsum.photos/200">
         <h2>Event</h2>
         <button data-number="1" class="btn">Click <strong>1</strong></button>
         <button data-number="2" class="btn">Click <strong>2</strong></button>
@@ -48,6 +49,18 @@
             button.addEventListener('click', handleClick)
         });
 
+        const img = document.querySelector('img');
+       /* img.addEventListener('mouseover', function(event)
+        {
+            console.log(event.currentTarget);
+            console.log(this);//внутри коллбека значение this=event.currentTarget - элемент слева от метода addEventListener то есть img
+        });*/
+
+        img.addEventListener('mouseover', (event) =>
+        {
+            console.log(event.currentTarget);
+            console.log(this);//значение this теряется, так как стрелочные функции получают внешний по отношению к себе контекст
+        });
 
     </script>
 </body>
