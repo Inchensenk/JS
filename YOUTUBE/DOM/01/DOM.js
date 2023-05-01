@@ -120,3 +120,6 @@ buttons.forEach(button =>
 {
     button.addEventListener('click', handleClick);//слушаем событие нажатия на кнопку мышью 'click' и при срабатывании события вызываем метод handleClick
 });
+
+
+//https://www.youtube.com/watch?v=yp5Cj36g5Uw&list=PLtL3lrXPn2rXYAkRYdTKOQLRUW1Gdp4v2&index=5
