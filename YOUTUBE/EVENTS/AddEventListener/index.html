@@ -16,13 +16,16 @@
         //Выделяем элемент с классом btn
         const button = document.querySelector('.btn');
 
+        function handleClick() 
+        {
+            console.log('click');
+        }
+
         /*Вешаем обработчик события на кнопку: 
         первый параметр ('click') - название события которое собираемся слушать
         Второй параметр - callback-функция
         */
-        button.addEventListener('click', function(){
-            console.log('click');
-        });
+        button.addEventListener('click', handleClick);
     </script>
 </body>
 </html>
