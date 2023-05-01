@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>События в JS (Events)</title>
+</head>
+<body>
+    <div class="wrapper">
+        <button data-number="1" class="btn">Click-1</button>
+        <button data-number="2" class="btn">Click-2</button>
+        <button data-number="3" class="btn">Click-3</button>
+        <button data-number="4" class="btn">Click-4</button>
+    </div>
+
+    <script>
+        "use strict";
+        const buttons = document.querySelectorAll('.btn');
+        
+        const handleClick = (event) =>
+        {
+            //event.target- целевой элемент - элемент на котором произошло событие - элемент на который кликнули
+            console.log(event.target);//отоброжаем кнопку на которую кликнули в виде DOM элемента// <button data-number="2" class="btn">Click-2</button>
+            console.log(event.target.dataset);//отоброжаем атрибут с номером кнопки// DOMStringMap {number: '2'}
+            console.log(event.target.dataset.number);//отоброжаем содержимое тега data-number// к примеру 3
+            console.log(parseInt(event.target.dataset.number));//преобразуем результат в число
+        }
+
+        buttons.forEach( button => 
+        {
+            button.addEventListener('click', handleClick)
+        }
+
+        );
+
+
+    </script>
+</body>
+</html>
