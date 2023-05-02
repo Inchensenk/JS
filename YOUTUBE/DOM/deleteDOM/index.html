@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clear">Delete</button>
+
+    <ol id="parent" >
+        <li>ITEM1</li>
+        <li>ITEM2</li>
+        <li>ITEM3</li>
+        <li>ITEM4</li>
+        <li>ITEM5</li>
+        <li>ITEM6</li>
+        <li>ITEM7</li>
+        <li>ITEM8</li>
+        <li>ITEM9</li>
+        <li>ITEM10</li>
+    </ol>
+    
+    <script>
+        const node = document.getElementById('parent');
+        const button = document.getElementById('clear');
+        button.addEventListener('click', clearFunc);
+        function clearFunc(){
+            node.querySelectorAll('*').forEach((node)=>
+            {
+                //удаление текущей ноды
+                node.remove();
+            });
+        }
+
+        /*
+        function clearFunc(){
+            //удаляем дочерние элементы
+            while(node.firstChild)//до тех пор пока не удалится первый дочерний элемент
+            {
+                //удаление последнего дочернего элемента
+                node.removeChild(node.lastChild);
+            }
+
+        }
+        */
+        /*function clearFunc(){
+            //удаление последнего дочернего элемента
+            node.removeChild(node.lastChild);
+        }*/
+
+        /*
+        function clearFunc(){
+            node.innerHTML = '';
+        }*/
+    </script>
+</body>
+</html>
